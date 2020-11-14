@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Universal Search Bar</title>
+    <link href="images/searchicon.ico" rel="icon" type="image/x-icon">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="fonts/stylesheet.css">
+    <link rel="stylesheet" href="fonts/font/stylesheet.css">
+</head>
+
+<body onload="document.body.style.opacity='1'">
+    <div id="desktop-content">
+
+        <div class="g_and_t">
+            <h1 id="clock"></h1>
+            <h4 id="today" style="margin-top: 0px;font-size: 2vw;"></h4>
+            <h1 id="greeting" style="font-size: 3.5vw;margin-top: 0px;position:static;"></h1>
+        </div>
+
+        <div class="searchDiv">
+            <input class="searchInput" id="mainInput" type="text" placeholder="Search Here"
+                style="margin-bottom: 30px;padding-right: 25px;" autofocus autocomplete="off"><br>
+            <table style="text-align: center">
+                <tr>
+                    <td><a id="google" class="firstPart" style="display: flex;justify-content: center;"><img
+                                src="images/google.png" style="height: 25px;align-content: center;"><span
+                                style="margin-left: 5px;padding-top: 11%;">Google</span></a></td>
+
+                    <td><a id="duck" style="display: flex;justify-content: center;"><img src="images/duck.png"
+                                style="height: 25px;align-content: center;"><span
+                                style="margin-left: 5px;padding-top: 6px;">DuckDuckGo</span></a></td>
+
+                    <td><a id="yahoo" style="display: flex;justify-content: center;"><img src="images/yahoo.png"
+                                style="height: 25px;align-content: center;padding-top: 3px;"><span
+                                style="margin-left: 5px;padding-top: 14%;">Yahoo</span></a></td>
+
+                    <td><a id="bing" style="display: flex;justify-content: center;"><img src="images/bing.png"
+                                style="height: 25px;align-content: center;"><span
+                                style="margin-left: 5px;padding-top: 5px;">Bing</span></a></td>
+
+
+                    <td><a id="youtube" class="firstPart" style="display: flex;justify-content: center;"><img
+                                src="images/youtube.png" style="height: 23px;align-content: center;"><span
+                                style="margin-left: 5px;padding-top: 11px;">Youtube</span></a></td>
+                </tr>
+                <tr>
+                    <td><a id="ebay" class="firstPart" style="display: flex;justify-content: center;"><img
+                                src="images/ebay.png" style="height: 25px;align-content: center;padding-top: 7px;"><span
+                                style="margin-left: 5px;padding-top: 15%;">Ebay</span></a></td>
+
+                    <td><a id="amazon" style="display: flex;justify-content: center;"><img src="images/amazon.png"
+                                style="height: 25px;align-content: center;"><span
+                                style="margin-left: 10px;padding-top: 10px;">Amazon</span></a></td>
+
+                    <td><a id="github" style="display: flex;justify-content: center;padding-top: 10px;"><img
+                                src="images/github.png"
+                                style="height: 25px;align-content: center;padding-top: 3px;"><span
+                                style="margin-left: 5px;padding-top: 15px;">GitHub</span></a></td>
+
+                    <td><a id="stackov" style="display: flex;justify-content: center;"><img
+                                src="images/stackoverflow.png"
+                                style="height: 30px;align-content: center;padding-top: 5px;padding-right: 0px;"><span
+                                style="margin-left: 0px;padding-top: 20px;font-size: 15px;padding-left: 0px;padding-right: 0px;">Stack
+                                Overflow</span></a>
+                    </td>
+
+                    <td><a id="brainly" class="firstPart" style="display: flex;justify-content: center;"><img
+                                src="images/Brainlyw.png" style="height: 25px;align-content: center;"><span
+                                style="margin-left: 5px;padding-top: 12px;">Brainly</span></a></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td><a id="wiki" style="display: flex;justify-content: center;"><img src="images/wikipedia.png"
+                                style="height: 30px;align-content: center;padding-bottom:2px;"><span
+                                style="margin-left: 5px;padding-top: 5px;">Wikipedia</span></a></td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="shopCountry" style="font-size: 13px;">
+            Sorry, We currently do not support this<br>country for the shopping websites.
+            <br>The default country is set to United States.
+            <br>To add the country please make an<br>issue in the github repository.
+        </div>
+
+        <div class="userConfig">
+
+            <a id="user" onclick="showUsername()"><img src="images/username.png" style="height: 50px;cursor: pointer;"
+                    title="Click here to change the settings"></a>
+
+            <div id="name_dialog">
+                <img id="name_image" onclick="hideUsername()" style="cursor:pointer" src="images/x.png" height="20px;"
+                    alt="close">
+                <h3 style="margin-bottom: 10px;margin-top: 10px;">Enter your Name:</h3>
+                <input id="user_name" style="border-radius:25px;outline: none;" type="text" placeholder="Name"
+                    autocomplete="off">
+
+                <h3 style="margin-bottom: 5px;margin-top: 13px;font-size: 17px;">Enter your Country Name:</h3>
+                <input id="dom_code" style="border-radius:25px;outline: none;" type="text" placeholder="Country"
+                    autocomplete="off">
+                <h4>Clock Format : <span class="hourFormat"><span id='h12'
+                            onclick="hourformat(false)">12-hour</span><br><span id='h24' onclick="hourformat(true)"
+                            style="position: relative;left: 64%;padding-top: 3px;">24-hour</span></span></h4>
+                <h4>Show Seconds : <span class="secFormat"><span id='syes' onclick="showSec(true)">Yes</span><br><span
+                            id='sno' onclick="showSec(false)"
+                            style="position: relative;left: 70%;padding-top: 3px;">No</span></span></h4>
+                <h4>Default Search Engine:
+                <span class="SetEngine">
+                    <span id="sGoogle" onclick="setEngine('google')">Google</span>
+                    <span id="sDuck" style="padding-left: 12px" onclick="setEngine('duck')">DuckDuckGo</span>
+                    <span id="sYahoo" style="padding-left: 1px" onclick="setEngine('yahoo')">Yahoo</span>
+                    <span id="sBing" style="padding-left: 19px" onclick="setEngine('bing')">Bing</span>
+                </span>
+                </h4>
+            </div>
+        </div>
+
+    </div>
+    <div id="mobile-content">
+        <center>
+            <br><br><br><br><br><br>
+            <img src="images/no.png" style="width: 25%;" alt="Not for mobile phones">
+            <h1 style="font-size: 40px;">Sorry, This website is not<br>optimized for this resolution</h1>
+        </center>
+    </div>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,8 @@
+1)add a json file which consists of the country name and its country code(for website) and link it with main file
+and make the user enter the name of the country and it I'll change the country code in it
+
+2)add an animation to the user preferences after clicking the button
+
+3)exit the user preferences settings after clicking away from it or pressing the escape key
+
+big_one)change the background which changes in every refresh(need to get mutiple background pictures)

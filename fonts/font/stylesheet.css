@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Orbitron';
+    src: url('Orbitron-SemiBold.woff2') format('woff2'),
+        url('Orbitron-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+

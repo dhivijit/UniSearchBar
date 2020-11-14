@@ -1,0 +1,16 @@
+@font-face {
+    font-family: 'luckiest_guyregular';
+    src: url('luckiestguy-regular-webfont.woff2') format('woff2'),
+         url('luckiestguy-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+@font-face {
+    font-family: 'nunitoregular';
+    src: url('nunito-regular-webfont.woff2') format('woff2'),
+         url('nunito-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+

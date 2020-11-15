@@ -1,10 +1,10 @@
 # UniSearchBar
 
-Thanks for visiting the **Universal Search Bar** (**UniSearchBar** for short)
+Thanks for visiting the [**Universal Search Bar**](https://dhivijit.github.io/UniSearchBar) ([**UniSearchBar**](https://dhivijit.github.io/UniSearchBar) for short)
 
-This ReadMe file gives the information about the **UniSearchBar**
+This ReadMe file gives the information about the [**UniSearchBar**](https://dhivijit.github.io/UniSearchBar)
 
-The **UniSearchBar** was created to create simplicity when searching 
+The [**UniSearchBar**](https://dhivijit.github.io/UniSearchBar) was created to create simplicity when searching 
 for the same term on different search engines or directly searching for answers for your questions on sites like Stack Overflow or searching for products on Amazon
 
 ---

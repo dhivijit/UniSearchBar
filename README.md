@@ -52,6 +52,9 @@ for the same term on different search engines or directly searching for answers 
 #### 3. Clicking the option will automatically Apply the changes and reload the page.
 
 ---
+
+## Tip: After typing your keyword you can press the enter key to make the search in your default search engine
+
 ## Available Search Engines 
 
  - Google

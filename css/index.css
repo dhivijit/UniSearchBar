@@ -69,9 +69,15 @@ a {
 }
 
 /***********Compatibility Warning*************/
+#resol-content {
+    display: none;
+}
+
 #mobile-content {
     display: none;
 }
+
+
 
 
 @media screen and (max-width: 600px) {
@@ -80,12 +86,24 @@ a {
         visibility: hidden;
     }
 
-    #mobile-content {
+    #resol-content {
         display: block;
     }
 }
 
 #mobile-content {
+    text-align: center;
+    background-color: #55c36b;
+    background-size: 100%;
+    background-position: center;
+    position: absolute;
+    top: 0%;
+    bottom: 0px;
+    left: 0%;
+    right: 0%;
+}
+
+#resol-content {
     text-align: center;
     background-color: #55c36b;
     background-size: 100%;

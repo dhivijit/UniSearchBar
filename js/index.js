@@ -304,8 +304,8 @@ document.getElementById("mainInput").addEventListener("input", function (e) {
     $("#yahoo").attr("href", "https://search.yahoo.com/search?p=" + sessionStorage.getItem("query"));
     $("#bing").attr("href", "https://www.bing.com/search?q=" + sessionStorage.getItem("query"));
     $("#youtube").attr("href", "https://www.youtube.com/results?search_query=" + sessionStorage.getItem("query"));
-    $("#ebay").attr("href", "https://www.ebay" + domainAm + "/sch/" + sessionStorage.getItem("query"));
-    $("#amazon").attr("href", "https://www.amazon" + domainEb + "/s?k=" + sessionStorage.getItem("query"));
+    $("#ebay").attr("href", "https://www.ebay" + domainEb + "/sch/" + sessionStorage.getItem("query"));
+    $("#amazon").attr("href", "https://www.amazon" + domainAm + "/s?k=" + sessionStorage.getItem("query"));
     $("#github").attr("href", "https://github.com/search?q=" + sessionStorage.getItem("query"));
     $("#stackov").attr("href", "https://stackoverflow.com/search?q=" + sessionStorage.getItem("query"));
     $("#brainly").attr("href", "https://brainly.com/app/ask?entry=top&q=" + sessionStorage.getItem("query"));
@@ -317,8 +317,8 @@ $("#duck").attr("href", "https://duckduckgo.com/?q=" + sessionStorage.getItem("q
 $("#yahoo").attr("href", "https://search.yahoo.com/search?p=" + sessionStorage.getItem("query"));
 $("#bing").attr("href", "https://www.bing.com/search?q=" + sessionStorage.getItem("query"));
 $("#youtube").attr("href", "https://www.youtube.com/results?search_query=" + sessionStorage.getItem("query"));
-$("#ebay").attr("href", "https://www.ebay" + domainAm + "/sch/" + sessionStorage.getItem("query"));
-$("#amazon").attr("href", "https://www.amazon" + domainEb + "/s?k=" + sessionStorage.getItem("query"));
+$("#ebay").attr("href", "https://www.ebay" + domainEb + "/sch/" + sessionStorage.getItem("query"));
+$("#amazon").attr("href", "https://www.amazon" + domainAm + "/s?k=" + sessionStorage.getItem("query"));
 $("#github").attr("href", "https://github.com/search?q=" + sessionStorage.getItem("query"));
 $("#stackov").attr("href", "https://stackoverflow.com/search?q=" + sessionStorage.getItem("query"));
 $("#brainly").attr("href", "https://brainly.com/app/ask?entry=top&q=" + sessionStorage.getItem("query"));

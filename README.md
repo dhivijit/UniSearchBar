@@ -23,6 +23,8 @@ for the same term on different search engines or directly searching for answers 
 
 # Setting Up
 
+## Detailed explanation of setting up the UniSearchBar is available on [**Youtube**](https://youtu.be/RPOw15LSyCc)
+
 ## User's Name
 
 #### 1. Click on the User Settings (Number 5).
@@ -51,7 +53,7 @@ for the same term on different search engines or directly searching for answers 
 #### 2. Click on your preferred Search Engine.
 #### 3. Clicking the option will automatically Apply the changes and reload the page.
 
-## Tip: After typing your keyword you can press the enter key to make the search in your default search engine
+ - ## Tip: After typing your keyword you can press the enter key to make the search in your default search engine
 
 ---
 ## Available Search Engines 

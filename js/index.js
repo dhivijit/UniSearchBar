@@ -80,6 +80,7 @@ if (localStorage.getItem("New") == "true") {
     console.log("Feel free to contact Me");
     console.log("This Document is copyrighted by Dhivijit");
     console.log("© Dhivijit");
+    console.log("The manual of the UniSearchBar is available at : https://github.com/dhivijit/UniSearchBar#unisearchbar")
     console.log("To remove this message type 'newUser(false)' in the console of this webpage");
 }
 /************Time and Date**********/

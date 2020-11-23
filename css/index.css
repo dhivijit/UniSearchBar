@@ -19,7 +19,7 @@ body {
 
 body:after {
     content: "";
-    background-image: url("../images/wall4re.jpg");
+    background-image: url("../images/prism.svg");
     background-repeat: no-repeat;
     background-size: 100% 150%;
     position: fixed;
@@ -259,6 +259,18 @@ a {
 }
 
 /************Button Design**********/
+#google,#duck,#yahoo,#bing,#youtube,#ebay,#amazon,#github,#stackov,#brainly,#wiki{
+    background-color: #43fff6;
+    box-shadow: 1px 1px 20px 0px #000000;
+    -webkit-box-shadow: 1px 1px 20px 0px #000000;
+    -moz-box-shadow: 1px 1px 20px 0px #000000;
+    text-shadow: 1px 1px 20px #000000;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+}
+
 
 #google {
     border-radius: 25px;
@@ -266,30 +278,12 @@ a {
     width: 120px;
     height: 25px;
     padding: 13.5px;
-    background-color: #43fff6;
-    box-shadow: 1px 1px 20px 0px #000000;
-    -webkit-box-shadow: 1px 1px 20px 0px #000000;
-    -moz-box-shadow: 1px 1px 20px 0px #000000;
-    text-shadow: 1px 1px 20px #000000;
-    text-decoration: none;
-    display: inline-block;
-    cursor: pointer;
-    text-align: center;
     white-space: nowrap;
 }
 
 #duck {
     border-radius: 25px;
     padding: 12.5px;
-    background-color: #43fff6;
-    box-shadow: 1px 1px 20px 0px #000000;
-    -webkit-box-shadow: 1px 1px 20px 0px #000000;
-    -moz-box-shadow: 1px 1px 20px 0px #000000;
-    text-shadow: 1px 1px 20px #000000;
-    text-decoration: none;
-    display: inline-block;
-    cursor: pointer;
-    text-align: center;
     white-space: nowrap;
     width: 120px;
     height: 27px;
@@ -299,15 +293,6 @@ a {
     border-radius: 25px;
     line-height: 0px;
     padding: 10px;
-    background-color: #43fff6;
-    box-shadow: 1px 1px 20px 0px #000000;
-    -webkit-box-shadow: 1px 1px 20px 0px #000000;
-    -moz-box-shadow: 1px 1px 20px 0px #000000;
-    text-shadow: 1px 1px 20px #000000;
-    text-decoration: none;
-    display: inline-block;
-    cursor: pointer;
-    text-align: center;
     white-space: nowrap;
     width: 120px;
     height: 32px;
@@ -316,17 +301,8 @@ a {
 #bing {
     border-radius: 25px;
     padding: 12.5px;
-    background-color: #43fff6;
-    box-shadow: 1px 1px 20px 0px #000000;
-    -webkit-box-shadow: 1px 1px 20px 0px #000000;
-    -moz-box-shadow: 1px 1px 20px 0px #000000;
-    text-shadow: 1px 1px 20px #000000;
-    text-decoration: none;
-    display: inline-block;
-    cursor: pointer;
     height: 20px;
     padding-bottom: 20px;
-    text-align: center;
     white-space: nowrap;
     width: 120px;
     height: 20px;
@@ -336,15 +312,6 @@ a {
     border-radius: 25px;
     line-height: 0px;
     padding: 15px;
-    background-color: #43fff6;
-    box-shadow: 1px 1px 20px 0px #000000;
-    -webkit-box-shadow: 1px 1px 20px 0px #000000;
-    -moz-box-shadow: 1px 1px 20px 0px #000000;
-    text-shadow: 1px 1px 20px #000000;
-    text-decoration: none;
-    display: inline-block;
-    cursor: pointer;
-    text-align: center;
     white-space: nowrap;
     width: 120px;
     height: 21px;
@@ -354,15 +321,6 @@ a {
     border-radius: 25px;
     line-height: 0px;
     padding: 5px;
-    background-color: #43fff6;
-    box-shadow: 1px 1px 20px 0px #000000;
-    -webkit-box-shadow: 1px 1px 20px 0px #000000;
-    -moz-box-shadow: 1px 1px 20px 0px #000000;
-    text-shadow: 1px 1px 20px #000000;
-    text-decoration: none;
-    display: inline-block;
-    cursor: pointer;
-    text-align: center;
     width: 135px;
     height: 40px;
 }
@@ -373,15 +331,6 @@ a {
     width: 113px;
     height: 20px;
     padding: 15px;
-    background-color: #43fff6;
-    box-shadow: 1px 1px 20px 0px #000000;
-    -webkit-box-shadow: 1px 1px 20px 0px #000000;
-    -moz-box-shadow: 1px 1px 20px 0px #000000;
-    text-shadow: 1px 1px 20px #000000;
-    text-decoration: none;
-    display: inline-block;
-    cursor: pointer;
-    text-align: center;
     white-space: nowrap;
 }
 
@@ -391,15 +340,6 @@ a {
     width: 129.3px;
     height: 35px;
     padding: 5px;
-    background-color: #43fff6;
-    box-shadow: 1px 1px 20px 0px #000000;
-    -webkit-box-shadow: 1px 1px 20px 0px #000000;
-    -moz-box-shadow: 1px 1px 20px 0px #000000;
-    text-shadow: 1px 1px 20px #000000;
-    text-decoration: none;
-    display: inline-block;
-    cursor: pointer;
-    text-align: center;
 }
 
 #stackov {
@@ -408,15 +348,6 @@ a {
     width: 134px;
     height: 40px;
     padding: 5px;
-    background-color: #43fff6;
-    box-shadow: 1px 1px 20px 0px #000000;
-    -webkit-box-shadow: 1px 1px 20px 0px #000000;
-    -moz-box-shadow: 1px 1px 20px 0px #000000;
-    text-shadow: 1px 1px 20px #000000;
-    text-decoration: none;
-    display: inline-block;
-    cursor: pointer;
-    text-align: center;
     white-space: nowrap;
 }
 
@@ -424,15 +355,6 @@ a {
     border-radius: 25px;
     line-height: 0px;
     padding: 15px;
-    background-color: #43fff6;
-    box-shadow: 1px 1px 20px 0px #000000;
-    -webkit-box-shadow: 1px 1px 20px 0px #000000;
-    -moz-box-shadow: 1px 1px 20px 0px #000000;
-    text-shadow: 1px 1px 20px #000000;
-    text-decoration: none;
-    display: inline-block;
-    cursor: pointer;
-    text-align: center;
     white-space: nowrap;
     width: 120px;
     height: 25px;
@@ -441,15 +363,6 @@ a {
 #wiki {
     border-radius: 25px;
     padding: 12.5px;
-    background-color: #43fff6;
-    box-shadow: 1px 1px 20px 0px #000000;
-    -webkit-box-shadow: 1px 1px 20px 0px #000000;
-    -moz-box-shadow: 1px 1px 20px 0px #000000;
-    text-shadow: 1px 1px 20px #000000;
-    text-decoration: none;
-    display: inline-block;
-    cursor: pointer;
-    text-align: center;
     white-space: nowrap;
     width: 113px;
     height: 25px;

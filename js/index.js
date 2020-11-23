@@ -3,7 +3,6 @@
 if (sessionStorage.getItem("query") == null) {
     sessionStorage.setItem("query", "");
 }
-$("name_dialog").slideDown();
 
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
     document.getElementById('desktop-content').style.display = 'none';
@@ -28,7 +27,8 @@ const am_code = {
     "unitedkingdom": ".co.uk",
     "unitedstates": ".com",
     "us": ".com",
-    "uk": ".co.uk"
+    "uk": ".co.uk",
+    "usa": ".com",
 };
 
 const eb_code={
@@ -47,7 +47,8 @@ const eb_code={
     "unitedkingdom": ".co.uk",
     "unitedstates": ".com",
     "us": ".com",
-    "uk": ".co.uk"
+    "uk": ".co.uk",
+    "usa": ".com"
 };
 /***************User Name**************/
 
@@ -80,7 +81,6 @@ if (localStorage.getItem("New") == "true") {
     console.log("Feel free to contact Me");
     console.log("This Document is copyrighted by Dhivijit");
     console.log("© Dhivijit");
-    console.log("The manual of the UniSearchBar is available at : https://github.com/dhivijit/UniSearchBar#unisearchbar")
     console.log("To remove this message type 'newUser(false)' in the console of this webpage");
 }
 /************Time and Date**********/
@@ -91,7 +91,6 @@ if (localStorage.getItem("clock") == null) {
 
 function showSec(param1) {
     localStorage.setItem("clock", param1);
-    window.location.reload();
 }
 
 if (localStorage.getItem("hour24") == null) {
@@ -100,7 +99,6 @@ if (localStorage.getItem("hour24") == null) {
 
 function hourformat(param2) {
     localStorage.setItem("hour24", param2);
-    window.location.reload();
 }
 
 function showTime() {
@@ -152,22 +150,10 @@ function showTime() {
     document.getElementById("clock").textContent = time;
 
 
-    setTimeout(showTime, 1000);
+    setTimeout(showTime, 100);
 }
 
 showTime();
-if (localStorage.getItem("hour24") == "true") {
-    document.getElementById("h12").style.opacity = 0.5;
-} else if (localStorage.getItem("hour24") == "false") {
-    document.getElementById("h24").style.opacity = 0.5;
-}
-
-if (localStorage.getItem("clock") == "true") {
-    document.getElementById("sno").style.opacity = 0.5;
-} else if (localStorage.getItem("clock") == "false") {
-    document.getElementById("syes").style.opacity = 0.5;
-}
-
 
 function showDate() {
     var date = new Date();
@@ -259,6 +245,8 @@ function setEngine(param3) {
 
 var sEngine = localStorage.getItem("engine");
 
+
+
 if (sEngine == "google") {
     document.getElementById("sDuck").style.opacity = 0.5;
     document.getElementById("sYahoo").style.opacity = 0.5;
@@ -336,6 +324,10 @@ document.getElementById("mainInput").addEventListener("keyup", function (e) {
 function hideUsername() {
     window.location.reload();
 }
+function hideWReload(){
+    $("#name_dialog").hide();
+    $("#user").show();
+}
 
 function showUsername() {
     $("#name_dialog").show();
@@ -347,14 +339,15 @@ function showUsername() {
 
 document.getElementById("user_name").addEventListener("input", function (e) {
     localStorage.setItem("user", e.target.value);
+    usersname=e.target.value;
 });
 
 document.getElementById("user_name").addEventListener("keyup", function (e) {
     if (e.keyCode === 13) {
-        hideUsername();
+        hideWReload();
     }
     if (e.keyCode === 27) {
-        hideUsername();
+        hideWReload();
     }
 });
 
@@ -363,6 +356,6 @@ document.getElementById("dom_code").addEventListener("keyup", function (e) {
         hideUsername();
     }
     if (e.keyCode === 27) {
-        hideUsername();
+        hideWReload();
     }
 });

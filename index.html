@@ -88,25 +88,20 @@
 
         <div class="userConfig">
 
-            <a id="user" onclick="showUsername()"><img src="images/username.png" style="height: 50px;cursor: pointer;"
-                    title="Click here to change the settings"></a>
+            <a id="user" onclick="showUsername()"><img src="images/username.png" style="height: 50px;cursor: pointer;float: right;" title="Click here to change the settings"></a>
 
             <div id="name_dialog">
-                <img id="name_image" onclick="hideWReload()" style="cursor:pointer" src="images/x.png" height="20px;"
-                    alt="close">
-                <h3 style="margin-bottom: 10px;margin-top: 10px;">Enter your Name:</h3>
+                <!-- <img id="name_image" onclick="hideWReload()" style="cursor:pointer" src="images/x.png" height="20px;"
+                    alt="close"> -->
+                <h3 style="margin-bottom: 10px;margin-top: 0px;">Enter your Name:</h3>
                 <input id="user_name" style="border-radius:25px;outline: none;" type="text" placeholder="Name"
                     autocomplete="off">
 
                 <h3 style="margin-bottom: 5px;margin-top: 13px;font-size: 17px;">Enter your Country Name:</h3>
                 <input id="dom_code" style="border-radius:25px;outline: none;" type="text" placeholder="Country"
                     autocomplete="off">
-                <h4>Clock Format : <span class="hourFormat"><span id='h12'
-                            onclick="hourformat(false)">12-hour</span><br><span id='h24' onclick="hourformat(true)"
-                            style="position: relative;left: 64%;padding-top: 3px;">24-hour</span></span></h4>
-                <h4>Show Seconds : <span class="secFormat"><span id='syes' onclick="showSec(true)">Yes</span><br><span
-                            id='sno' onclick="showSec(false)"
-                            style="position: relative;left: 70%;padding-top: 3px;">No</span></span></h4>
+                <h4>Clock Format : <span class="hourFormat" id="clockChange" onclick="clockChanger();"></span></h4>
+                <h4>Seconds : <span class="secFormat" id="secChange" onclick="secChanger();"></span></h4>
                 <h4>Default Search Engine:
                 <span class="SetEngine">
                     <span id="sGoogle" onclick="setEngine('google')">Google</span>

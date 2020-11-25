@@ -9,6 +9,19 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
     document.getElementById('mobile-content').style.display = 'block';
 }
 
+
+if(localStorage.getItem("hour24")=="true"){
+    document.getElementById("clockChange").innerText="12 Hour";
+}else{
+    document.getElementById("clockChange").innerText="24 Hour";
+}
+
+if(localStorage.getItem("clock")=="true"){
+    document.getElementById("secChange").innerText="Hide";
+}else{
+    document.getElementById("secChange").innerText="Show";
+}
+
 /******** JSON Data ****************/
 
 const am_code = {
@@ -81,6 +94,7 @@ if (localStorage.getItem("New") == "true") {
     console.log("Feel free to contact Me");
     console.log("This Document is copyrighted by Dhivijit");
     console.log("© Dhivijit");
+    console.log("The manual of the UniSearchBar is available at : https://github.com/dhivijit/UniSearchBar#unisearchbar")
     console.log("To remove this message type 'newUser(false)' in the console of this webpage");
 }
 /************Time and Date**********/
@@ -97,8 +111,24 @@ if (localStorage.getItem("hour24") == null) {
     localStorage.setItem("hour24", false);
 }
 
-function hourformat(param2) {
-    localStorage.setItem("hour24", param2);
+function clockChanger(){
+    if(localStorage.getItem("hour24")=="true"){
+        localStorage.setItem("hour24", false);
+        document.getElementById("clockChange").innerText="24 Hour";
+    }else{
+        localStorage.setItem("hour24", true);
+        document.getElementById("clockChange").innerText="12 Hour";
+    }
+}
+
+function secChanger(){
+    if(localStorage.getItem("clock")=="true"){
+        localStorage.setItem("clock", false);
+        document.getElementById("secChange").innerText="Show";
+    }else{
+        localStorage.setItem("clock", true);
+        document.getElementById("secChange").innerText="Hide";
+    }
 }
 
 function showTime() {
@@ -234,36 +264,41 @@ function showDate() {
 
 showDate();
 
+var sEngine = localStorage.getItem("engine");
+function searchEngineChecker(s_Engine){
+if (s_Engine == "google") {
+    document.getElementById("sDuck").style.opacity = 0.5;
+    document.getElementById("sYahoo").style.opacity = 0.5;
+    document.getElementById("sBing").style.opacity = 0.5;
+} else if (s_Engine == "duck") {
+    document.getElementById("sGoogle").style.opacity = 0.5;
+    document.getElementById("sYahoo").style.opacity = 0.5;
+    document.getElementById("sBing").style.opacity = 0.5;
+} else if (s_Engine == "yahoo") {
+    document.getElementById("sDuck").style.opacity = 0.5;
+    document.getElementById("sGoogle").style.opacity = 0.5;
+    document.getElementById("sBing").style.opacity = 0.5;
+} else if (s_Engine == "bing") {
+    document.getElementById("sDuck").style.opacity = 0.5;
+    document.getElementById("sYahoo").style.opacity = 0.5;
+    document.getElementById("sGoogle").style.opacity = 0.5;
+}
+}
+searchEngineChecker(sEngine);
 if (localStorage.getItem("engine") == null) {
     localStorage.setItem("engine", "google");
 }
 
 function setEngine(param3) {
     localStorage.setItem("engine", param3);
-    window.location.reload();
+    document.getElementById("sGoogle").style.opacity = 1;
+    document.getElementById("sDuck").style.opacity = 1;
+    document.getElementById("sYahoo").style.opacity = 1;
+    document.getElementById("sBing").style.opacity = 1;
+    searchEngineChecker(param3);
 }
 
-var sEngine = localStorage.getItem("engine");
 
-
-
-if (sEngine == "google") {
-    document.getElementById("sDuck").style.opacity = 0.5;
-    document.getElementById("sYahoo").style.opacity = 0.5;
-    document.getElementById("sBing").style.opacity = 0.5;
-} else if (sEngine == "duck") {
-    document.getElementById("sGoogle").style.opacity = 0.5;
-    document.getElementById("sYahoo").style.opacity = 0.5;
-    document.getElementById("sBing").style.opacity = 0.5;
-} else if (sEngine == "yahoo") {
-    document.getElementById("sDuck").style.opacity = 0.5;
-    document.getElementById("sGoogle").style.opacity = 0.5;
-    document.getElementById("sBing").style.opacity = 0.5;
-} else if (sEngine == "bing") {
-    document.getElementById("sDuck").style.opacity = 0.5;
-    document.getElementById("sYahoo").style.opacity = 0.5;
-    document.getElementById("sGoogle").style.opacity = 0.5;
-}
 
 if (localStorage.getItem("co-code") == null) {
     localStorage.setItem("co-code", "us");
@@ -283,11 +318,8 @@ if (am_code[usersDomain] === undefined) {
 var domainAm = am_code[usersDomain];
 var domainEb = eb_code[usersDomain];
 
-/********************Main Search Code**************/
 
-document.getElementById("mainInput").addEventListener("input", function (e) {
-    sessionStorage.setItem("query", e.target.value);
-
+function mainSearchExe(){
     $("#google").attr("href", "https://www.google.com/search?q=" + sessionStorage.getItem("query"));
     $("#duck").attr("href", "https://duckduckgo.com/?q=" + sessionStorage.getItem("query"));
     $("#yahoo").attr("href", "https://search.yahoo.com/search?p=" + sessionStorage.getItem("query"));
@@ -299,40 +331,35 @@ document.getElementById("mainInput").addEventListener("input", function (e) {
     $("#stackov").attr("href", "https://stackoverflow.com/search?q=" + sessionStorage.getItem("query"));
     $("#brainly").attr("href", "https://brainly.com/app/ask?entry=top&q=" + sessionStorage.getItem("query"));
     $("#wiki").attr("href", "https://wikipedia.org/w/index.php?search=" + sessionStorage.getItem("query"));
+}
+
+/********************Main Search Code**************/
+
+document.getElementById("mainInput").addEventListener("input", function (e) {
+    sessionStorage.setItem("query", e.target.value);
+
+    mainSearchExe();
 });
 
-$("#google").attr("href", "https://www.google.com/search?q=" + sessionStorage.getItem("query"));
-$("#duck").attr("href", "https://duckduckgo.com/?q=" + sessionStorage.getItem("query"));
-$("#yahoo").attr("href", "https://search.yahoo.com/search?p=" + sessionStorage.getItem("query"));
-$("#bing").attr("href", "https://www.bing.com/search?q=" + sessionStorage.getItem("query"));
-$("#youtube").attr("href", "https://www.youtube.com/results?search_query=" + sessionStorage.getItem("query"));
-$("#ebay").attr("href", "https://www.ebay" + domainEb + "/sch/" + sessionStorage.getItem("query"));
-$("#amazon").attr("href", "https://www.amazon" + domainAm + "/s?k=" + sessionStorage.getItem("query"));
-$("#github").attr("href", "https://github.com/search?q=" + sessionStorage.getItem("query"));
-$("#stackov").attr("href", "https://stackoverflow.com/search?q=" + sessionStorage.getItem("query"));
-$("#brainly").attr("href", "https://brainly.com/app/ask?entry=top&q=" + sessionStorage.getItem("query"));
-$("#wiki").attr("href", "https://wikipedia.org/w/index.php?search=" + sessionStorage.getItem("query"));
+mainSearchExe();
 
 document.getElementById("mainInput").addEventListener("keyup", function (e) {
     if (e.keyCode === 13) {
-        document.getElementById(sEngine).click();
+        document.getElementById(localStorage.getItem("engine")).click();
     }
 });
 
 /**************User Name Changer*************/
 
-function hideUsername() {
-    window.location.reload();
-}
 function hideWReload(){
-    $("#name_dialog").hide();
+    $("#name_dialog").slideUp();
     $("#user").show();
 }
 
 function showUsername() {
-    $("#name_dialog").show();
-    $("#name_dialog").attr("autofocus", "true");
+    $("#name_dialog").slideDown();
     $("#user").hide();
+    $("#name_dialog").attr("autofocus", "true");
     $("#mainInput").attr("autofocus", "off");
     $("#user_name").attr("autofocus", "on");
 }
@@ -353,9 +380,15 @@ document.getElementById("user_name").addEventListener("keyup", function (e) {
 
 document.getElementById("dom_code").addEventListener("keyup", function (e) {
     if (e.keyCode === 13) {
-        hideUsername();
+        window.location.reload();
     }
     if (e.keyCode === 27) {
+        hideWReload();
+    }
+});
+
+$(document).mouseup(function (e) {
+    if ($(e.target).closest(".userConfig").length === 0) {
         hideWReload();
     }
 });

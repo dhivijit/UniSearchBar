@@ -144,7 +144,6 @@ a {
 
 .hourFormat,
 .secFormat{
-    opacity: 0.8;
     cursor: pointer;
 }
 
@@ -207,9 +206,15 @@ a {
 
 /************Id's***********/
 
+#user{
+    position: absolute;
+    right: 3px;
+    bottom: 8px;
+}
+
 #name_dialog {
     background-color: rgba(131, 231, 168, 0.3);
-    height: 345px;
+    height: 285px;
     width: 185px;
     padding: 13px;
     border-radius: 5px;
@@ -219,10 +224,8 @@ a {
 
 #name_image {
     position: absolute;
-    top: 7px;
+    top: 10px;
     right: 10px;
-    padding: 0px;
-    margin: 0px;
 }
 
 #user_name {

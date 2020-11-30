@@ -20,7 +20,7 @@
         </div>
 
         <div class="searchDiv">
-            <input class="searchInput" id="mainInput" type="text" placeholder="Search Here"
+            <input class="searchInput mousetrap" id="mainInput" type="text" placeholder="Search Here"
                 style="margin-bottom: 30px;padding-right: 25px;" autofocus autocomplete="off"><br>
             <table style="text-align: center">
                 <tr>
@@ -80,6 +80,54 @@
             </table>
         </div>
 
+        <div id="shortcutHelp">
+            <h3 style="margin-top: 0px;margin-bottom: 10px;">
+                <center>Shortcut Keys Help</center>
+            </h3>
+            <hr>
+            <table style="text-align: center;">
+                <th>Shortcut</th>
+                <th>Function</th>
+                <th>Shortcut</th>
+                <th>Function</th>
+                <th>Shortcut</th>
+                <th>Function</th>
+                <tr>
+                    <td><span class="default">alt+h</span><span class="macos">control+t</span></span></td>
+                    <td>Show or Hide the help menu</td>
+                    <td><span class="default">ctrl+alt+1</span><span class="macos">option+control+1</span></td>
+                    <td>Change the default Search Engine to Google</td>
+                    <td><span class="default">alt+a</span><span class="macos">control+a</span></td>
+                    <td>Make a Youtube search</td>
+
+                </tr>
+                <tr>
+                    <td><span class="default">alt+q</span><span class="macos">control+q</span></td>
+                    <td>Show or Hide the setting menu</td>
+                    <td><span class="default">ctrl+alt+2</span><span class="macos">option+control+2</span></td>
+                    <td>Change the default Search Engine to DuckDuckGo</td>
+                    <td><span class="default">alt+s</span><span class="macos">control+s</span></td>
+                    <td>Make a Amazon search</td>
+                </tr>
+                <tr>
+                    <td><span class="default">alt+shift+1</span><span class="macos">control+shift+1</span></td>
+                    <td>Toggle the clock format</td>
+                    <td><span class="default">ctrl+alt+3</span><span class="macos">option+control+3</span></td>
+                    <td>Change the default Search Engine to Yahoo</td>
+                    <td><span class="default">alt+z</span><span class="macos">control+z</span></td>
+                    <td>Make a Github search</td>
+                </tr>
+                <tr>
+                    <td><span class="default">alt+shift+2</span><span class="macos">control+shift+2</span></td>
+                    <td>Toggle the seconds view</td>
+                    <td><span class="default">ctrl+alt+4</span><span class="macos">option+control+4</span></td>
+                    <td>Change the default Search Engine to Bing</td>
+                    <td><span class="default">alt+x</span><span class="macos">control+x</span></td>
+                    <td>Make a Wikipedia search</td>
+                </tr>
+            </table>
+        </div>
+
         <div id="shopCountry" style="font-size: 13px;">
             Sorry, We currently do not support this<br>country for the shopping websites.
             <br>The default country is set to United States.
@@ -88,27 +136,28 @@
 
         <div class="userConfig">
 
-            <a id="user" onclick="showUsername()"><img src="images/username.png" style="height: 50px;cursor: pointer;float: right;" title="Click here to change the settings"></a>
+            <a id="user" onclick="showUsername()"><img src="images/settings.png"
+                    style="height: 40px;cursor: pointer;float: right;" title="Settings"></a>
 
             <div id="name_dialog">
                 <!-- <img id="name_image" onclick="hideWReload()" style="cursor:pointer" src="images/x.png" height="20px;"
                     alt="close"> -->
                 <h3 style="margin-bottom: 10px;margin-top: 0px;">Enter your Name:</h3>
-                <input id="user_name" style="border-radius:25px;outline: none;" type="text" placeholder="Name"
-                    autocomplete="off">
+                <input id="user_name" class="mousetrap" style="border-radius:25px;outline: none;" type="text"
+                    placeholder="Name" autocomplete="off">
 
                 <h3 style="margin-bottom: 5px;margin-top: 13px;font-size: 17px;">Enter your Country Name:</h3>
-                <input id="dom_code" style="border-radius:25px;outline: none;" type="text" placeholder="Country"
-                    autocomplete="off">
+                <input class="mousetrap" id="dom_code" style="border-radius:25px;outline: none;" type="text"
+                    placeholder="Country" autocomplete="off">
                 <h4>Clock Format : <span class="hourFormat" id="clockChange" onclick="clockChanger();"></span></h4>
                 <h4>Seconds : <span class="secFormat" id="secChange" onclick="secChanger();"></span></h4>
                 <h4>Default Search Engine:
-                <span class="SetEngine">
-                    <span id="sGoogle" onclick="setEngine('google')">Google</span>
-                    <span id="sDuck" style="padding-left: 12px" onclick="setEngine('duck')">DuckDuckGo</span>
-                    <span id="sYahoo" style="padding-left: 1px" onclick="setEngine('yahoo')">Yahoo</span>
-                    <span id="sBing" style="padding-left: 19px" onclick="setEngine('bing')">Bing</span>
-                </span>
+                    <span class="SetEngine">
+                        <span id="sGoogle" onclick="setEngine('google')">Google</span>
+                        <span id="sDuck" style="padding-left: 12px" onclick="setEngine('duck')">DuckDuckGo</span>
+                        <span id="sYahoo" style="padding-left: 1px" onclick="setEngine('yahoo')">Yahoo</span>
+                        <span id="sBing" style="padding-left: 19px" onclick="setEngine('bing')">Bing</span>
+                    </span>
                 </h4>
             </div>
         </div>
@@ -129,6 +178,7 @@
         </center>
     </div>
     <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/mousetrap.min.js"></script>
     <script src="js/index.js"></script>
 </body>
 

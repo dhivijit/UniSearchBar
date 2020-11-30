@@ -1,12 +1,12 @@
 /************Tags****************/
-html{
+html {
     cursor: default;
-    -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 body {
@@ -69,16 +69,32 @@ a {
 }
 
 /***********Compatibility Warning*************/
+
 #resol-content {
+    text-align: center;
+    background-color: #55c36b;
+    background-size: 100%;
+    background-position: center;
+    position: absolute;
+    top: 0%;
+    bottom: 0px;
+    left: 0%;
+    right: 0%;
     display: none;
 }
 
 #mobile-content {
+    text-align: center;
+    background-color: #55c36b;
+    background-size: 100%;
+    background-position: center;
+    position: absolute;
+    top: 0%;
+    bottom: 0px;
+    left: 0%;
+    right: 0%;
     display: none;
 }
-
-
-
 
 @media screen and (max-width: 600px) {
     #desktop-content {
@@ -91,37 +107,13 @@ a {
     }
 }
 
-#mobile-content {
-    text-align: center;
-    background-color: #55c36b;
-    background-size: 100%;
-    background-position: center;
+#shopCountry {
     position: absolute;
-    top: 0%;
-    bottom: 0px;
-    left: 0%;
-    right: 0%;
-}
-
-#resol-content {
-    text-align: center;
-    background-color: #55c36b;
-    background-size: 100%;
-    background-position: center;
-    position: absolute;
-    top: 0%;
-    bottom: 0px;
-    left: 0%;
-    right: 0%;
-}
-
-#shopCountry{
-    position: absolute;
-    left:10px;
+    left: 10px;
     bottom: 20px;
     border-style: solid;
     border-radius: 10px;
-    padding:10px;
+    padding: 10px;
     display: none;
     border-width: 2px;
 }
@@ -143,11 +135,11 @@ a {
 }
 
 .hourFormat,
-.secFormat{
+.secFormat {
     cursor: pointer;
 }
 
-.SetEngine{
+.SetEngine {
     opacity: 0.8;
     cursor: pointer;
 }
@@ -159,8 +151,8 @@ a {
 #sGoogle:hover,
 #sDuck:hover,
 #sYahoo:hover,
-#sBing:hover{
-    text-shadow:2px 2px 2px #2f6627;
+#sBing:hover {
+    text-shadow: 2px 2px 2px #2f6627;
 }
 
 /*********Search Bar***********/
@@ -206,10 +198,15 @@ a {
 
 /************Id's***********/
 
-#user{
+#user {
     position: absolute;
     right: 3px;
     bottom: 8px;
+    transition: width 0.5s, height 0.5s, transform 0.5s;
+}
+
+#user:hover {
+    transform: rotate(100deg);
 }
 
 #name_dialog {
@@ -261,8 +258,40 @@ a {
     display: inline-block;
 }
 
+#shortcutHelp {
+    display: none;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 35%;
+    transform: translate(-50%, -50%);
+    height:355px;
+    width:950px;
+    padding: 15px;
+    font-size: 15px;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.default{
+    display: none;
+}
+.macos{
+    display: none;
+}
+
 /************Button Design**********/
-#google,#duck,#yahoo,#bing,#youtube,#ebay,#amazon,#github,#stackov,#brainly,#wiki{
+#google,
+#duck,
+#yahoo,
+#bing,
+#youtube,
+#ebay,
+#amazon,
+#github,
+#stackov,
+#brainly,
+#wiki {
     background-color: #43fff6;
     box-shadow: 1px 1px 20px 0px #000000;
     -webkit-box-shadow: 1px 1px 20px 0px #000000;

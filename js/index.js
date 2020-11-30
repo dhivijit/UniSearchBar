@@ -4,22 +4,22 @@ if (sessionStorage.getItem("query") == null) {
     sessionStorage.setItem("query", "");
 }
 
-if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
     document.getElementById('desktop-content').style.display = 'none';
     document.getElementById('mobile-content').style.display = 'block';
 }
 
 
-if(localStorage.getItem("hour24")=="true"){
-    document.getElementById("clockChange").innerText="12 Hour";
-}else{
-    document.getElementById("clockChange").innerText="24 Hour";
+if (localStorage.getItem("hour24") == "true") {
+    document.getElementById("clockChange").innerText = "12 Hour";
+} else {
+    document.getElementById("clockChange").innerText = "24 Hour";
 }
 
-if(localStorage.getItem("clock")=="true"){
-    document.getElementById("secChange").innerText="Hide";
-}else{
-    document.getElementById("secChange").innerText="Show";
+if (localStorage.getItem("clock") == "true") {
+    document.getElementById("secChange").innerText = "Hide";
+} else {
+    document.getElementById("secChange").innerText = "Show";
 }
 
 /******** JSON Data ****************/
@@ -44,7 +44,7 @@ const am_code = {
     "usa": ".com",
 };
 
-const eb_code={
+const eb_code = {
     "australia": ".com.au",
     "brazil": ".com",
     "canada": ".ca",
@@ -94,7 +94,7 @@ if (localStorage.getItem("New") == "true") {
     console.log("Feel free to contact Me");
     console.log("This Document is copyrighted by Dhivijit");
     console.log("© Dhivijit");
-    console.log("The manual of the UniSearchBar is available at : https://github.com/dhivijit/UniSearchBar#unisearchbar")
+    console.log("The manual of the UniSearchBar is available at : https://github.com/dhivijit/UniSearchBar#unisearchbar");
     console.log("To remove this message type 'newUser(false)' in the console of this webpage");
 }
 /************Time and Date**********/
@@ -111,23 +111,23 @@ if (localStorage.getItem("hour24") == null) {
     localStorage.setItem("hour24", false);
 }
 
-function clockChanger(){
-    if(localStorage.getItem("hour24")=="true"){
+function clockChanger() {
+    if (localStorage.getItem("hour24") == "true") {
         localStorage.setItem("hour24", false);
-        document.getElementById("clockChange").innerText="24 Hour";
-    }else{
+        document.getElementById("clockChange").innerText = "24 Hour";
+    } else {
         localStorage.setItem("hour24", true);
-        document.getElementById("clockChange").innerText="12 Hour";
+        document.getElementById("clockChange").innerText = "12 Hour";
     }
 }
 
-function secChanger(){
-    if(localStorage.getItem("clock")=="true"){
+function secChanger() {
+    if (localStorage.getItem("clock") == "true") {
         localStorage.setItem("clock", false);
-        document.getElementById("secChange").innerText="Show";
-    }else{
+        document.getElementById("secChange").innerText = "Show";
+    } else {
         localStorage.setItem("clock", true);
-        document.getElementById("secChange").innerText="Hide";
+        document.getElementById("secChange").innerText = "Hide";
     }
 }
 
@@ -265,24 +265,25 @@ function showDate() {
 showDate();
 
 var sEngine = localStorage.getItem("engine");
-function searchEngineChecker(s_Engine){
-if (s_Engine == "google") {
-    document.getElementById("sDuck").style.opacity = 0.5;
-    document.getElementById("sYahoo").style.opacity = 0.5;
-    document.getElementById("sBing").style.opacity = 0.5;
-} else if (s_Engine == "duck") {
-    document.getElementById("sGoogle").style.opacity = 0.5;
-    document.getElementById("sYahoo").style.opacity = 0.5;
-    document.getElementById("sBing").style.opacity = 0.5;
-} else if (s_Engine == "yahoo") {
-    document.getElementById("sDuck").style.opacity = 0.5;
-    document.getElementById("sGoogle").style.opacity = 0.5;
-    document.getElementById("sBing").style.opacity = 0.5;
-} else if (s_Engine == "bing") {
-    document.getElementById("sDuck").style.opacity = 0.5;
-    document.getElementById("sYahoo").style.opacity = 0.5;
-    document.getElementById("sGoogle").style.opacity = 0.5;
-}
+
+function searchEngineChecker(s_Engine) {
+    if (s_Engine == "google") {
+        document.getElementById("sDuck").style.opacity = 0.5;
+        document.getElementById("sYahoo").style.opacity = 0.5;
+        document.getElementById("sBing").style.opacity = 0.5;
+    } else if (s_Engine == "duck") {
+        document.getElementById("sGoogle").style.opacity = 0.5;
+        document.getElementById("sYahoo").style.opacity = 0.5;
+        document.getElementById("sBing").style.opacity = 0.5;
+    } else if (s_Engine == "yahoo") {
+        document.getElementById("sDuck").style.opacity = 0.5;
+        document.getElementById("sGoogle").style.opacity = 0.5;
+        document.getElementById("sBing").style.opacity = 0.5;
+    } else if (s_Engine == "bing") {
+        document.getElementById("sDuck").style.opacity = 0.5;
+        document.getElementById("sYahoo").style.opacity = 0.5;
+        document.getElementById("sGoogle").style.opacity = 0.5;
+    }
 }
 searchEngineChecker(sEngine);
 if (localStorage.getItem("engine") == null) {
@@ -319,7 +320,7 @@ var domainAm = am_code[usersDomain];
 var domainEb = eb_code[usersDomain];
 
 
-function mainSearchExe(){
+function mainSearchExe() {
     $("#google").attr("href", "https://www.google.com/search?q=" + sessionStorage.getItem("query"));
     $("#duck").attr("href", "https://duckduckgo.com/?q=" + sessionStorage.getItem("query"));
     $("#yahoo").attr("href", "https://search.yahoo.com/search?p=" + sessionStorage.getItem("query"));
@@ -351,9 +352,10 @@ document.getElementById("mainInput").addEventListener("keyup", function (e) {
 
 /**************User Name Changer*************/
 
-function hideWReload(){
-    $("#name_dialog").slideUp();
-    $("#user").show();
+function hideWReload() {
+    $("#name_dialog").slideUp(function () {
+        $("#user").show();
+    });
 }
 
 function showUsername() {
@@ -366,7 +368,7 @@ function showUsername() {
 
 document.getElementById("user_name").addEventListener("input", function (e) {
     localStorage.setItem("user", e.target.value);
-    usersname=e.target.value;
+    usersname = e.target.value;
 });
 
 document.getElementById("user_name").addEventListener("keyup", function (e) {
@@ -392,3 +394,113 @@ $(document).mouseup(function (e) {
         hideWReload();
     }
 });
+
+$(document).mouseup(function (e) {
+    if ($(e.target).closest("#shortcutHelp").length === 0) {
+        $("#shortcutHelp").fadeOut();
+    }
+});
+
+/**************Shortcut Keys***************/
+
+Mousetrap.bind("ctrl+option+1", function (e) {
+    document.getElementById("sGoogle").click();
+});
+
+Mousetrap.bind("ctrl+option+2", function (e) {
+    document.getElementById("sDuck").click();
+});
+
+Mousetrap.bind("ctrl+option+3", function (e) {
+    document.getElementById("sYahoo").click();
+});
+
+Mousetrap.bind("ctrl+option+4", function (e) {
+    document.getElementById("sBing").click();
+});
+
+if (/Macintosh/i.test(navigator.userAgent)) {
+
+    $(".macos").show();
+
+    Mousetrap.bind("ctrl+t", function (e) {
+    $("#shortcutHelp").fadeToggle();
+});
+
+Mousetrap.bind("esc", function (e) {
+    $("#shortcutHelp").fadeOut();
+    $("#name_dialog").slideUp();
+    $("#user").show();
+});
+
+Mousetrap.bind("ctrl+q", function (e) {
+    $("#name_dialog").slideToggle();
+    $("#user").toggle();
+});
+
+Mousetrap.bind("ctrl+shift+1", function (e) {
+    document.getElementById("clockChange").click();
+});
+
+Mousetrap.bind("ctrl+shift+2", function (e) {
+    document.getElementById("secChange").click();
+});
+
+Mousetrap.bind("ctrl+a", function (e) {
+    document.getElementById("youtube").click();
+});
+
+Mousetrap.bind("ctrl+s", function (e) {
+    document.getElementById("amazon").click();
+});
+
+Mousetrap.bind("ctrl+z", function (e) {
+    document.getElementById("github").click();
+});
+
+Mousetrap.bind("ctrl+x", function (e) {
+    document.getElementById("wiki").click();
+});
+
+}else{
+    $(".default").show();
+
+Mousetrap.bind("alt+h", function (e) {
+    $("#shortcutHelp").fadeToggle();
+});
+
+Mousetrap.bind("esc", function (e) {
+    $("#shortcutHelp").fadeOut();
+    $("#name_dialog").slideUp();
+    $("#user").show();
+});
+
+Mousetrap.bind("alt+q", function (e) {
+    $("#name_dialog").slideToggle();
+    $("#user").toggle();
+});
+
+Mousetrap.bind("alt+shift+1", function (e) {
+    document.getElementById("clockChange").click();
+});
+
+Mousetrap.bind("alt+shift+2", function (e) {
+    document.getElementById("secChange").click();
+});
+
+Mousetrap.bind("alt+a", function (e) {
+    document.getElementById("youtube").click();
+});
+
+Mousetrap.bind("alt+s", function (e) {
+    document.getElementById("amazon").click();
+});
+
+Mousetrap.bind("alt+z", function (e) {
+    document.getElementById("github").click();
+});
+
+Mousetrap.bind("alt+x", function (e) {
+    document.getElementById("wiki").click();
+});
+}

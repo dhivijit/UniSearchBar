@@ -22,7 +22,7 @@
         <div class="searchDiv">
             <input class="searchInput mousetrap" id="mainInput" type="text" placeholder="Search Here"
                 style="margin-bottom: 30px;padding-right: 25px;" autofocus autocomplete="off"><br>
-            <table style="text-align: center">
+            <table id="searchTable" style="text-align: center">
                 <tr>
                     <td><a id="google" class="firstPart" style="display: flex;justify-content: center;"><img
                                 src="images/google.png" style="height: 25px;align-content: center;"><span
@@ -78,6 +78,7 @@
                                 style="margin-left: 5px;padding-top: 5px;">Wikipedia</span></a></td>
                 </tr>
             </table>
+            <a id="webSearch"></a>
         </div>
 
         <div id="shortcutHelp">
@@ -99,7 +100,6 @@
                     <td>Change the default Search Engine to Google</td>
                     <td><span class="default">alt+a</span><span class="macos">control+a</span></td>
                     <td>Make a Youtube search</td>
-
                 </tr>
                 <tr>
                     <td><span class="default">alt+q</span><span class="macos">control+q</span></td>
@@ -125,6 +125,12 @@
                     <td><span class="default">alt+x</span><span class="macos">control+x</span></td>
                     <td>Make a Wikipedia search</td>
                 </tr>
+                <tr>
+                    <td><span class="default">alt+shift+3</span><span class="macos">control+shift+3</span></td>
+                    <td>Toggle to view buttons</td>
+                    <td><span class="default">alt+c</span><span class="macos">control+c</span></td>
+                    <td>For directly going to a given url<br>(Do not include the http or https)</td>
+                </tr>
             </table>
         </div>
 
@@ -132,6 +138,7 @@
             Sorry, We currently do not support this<br>country for the shopping websites.
             <br>The default country is set to United States.
             <br>To add the country please make an<br>issue in the github repository.
+            <br>The list of available countries is<br>available in the <a href="https://github.com/dhivijit/UniSearchBar#countries-supported-for-the-shopping-websites">Readme file</a>
         </div>
 
         <div class="userConfig">
@@ -151,6 +158,7 @@
                     placeholder="Country" autocomplete="off">
                 <h4>Clock Format : <span class="hourFormat" id="clockChange" onclick="clockChanger();"></span></h4>
                 <h4>Seconds : <span class="secFormat" id="secChange" onclick="secChanger();"></span></h4>
+                <h4>Buttons : <span id="buttonChange" style="cursor:pointer;" onclick="butChange();"></span></h4>
                 <h4>Default Search Engine:
                     <span class="SetEngine">
                         <span id="sGoogle" onclick="setEngine('google')">Google</span>
